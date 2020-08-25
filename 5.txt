@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+class Venue1{
+	private String name;
+	private String city;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+}
+
+public class VenueDetails1 {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		Venue1 v=new Venue1();
+		System.out.println("Enter the venue name");
+		v.setName(s.nextLine());
+		System.out.println("Enter the city name");
+		v.setCity(s.nextLine());
+		boolean flag=false;
+		while(true) {
+			System.out.println("Venue Details\nVenue Name : "+v.getName()+"\nCity Name : "+v.getCity());
+			if(flag) {
+				break;
+			}
+			System.out.println("Verify and Update Venue Details \nMenu \n1.Update Venue Name \n2.Update City Name \n3.All informations Correct/Exit" );
+			System.out.println("Type 1 or 2 or 3");
+			int opt=s.nextInt();
+			if(opt==1) {
+				s.nextLine();
+				System.out.println("Enter the venue name");
+				v.setName(s.nextLine());
+			}
+			else if(opt==2) {
+				s.nextLine();
+				System.out.println("Enter the city name");
+				v.setCity(s.nextLine());
+			}
+			else if(opt==3) {
+				flag=true;
+			}
+			
+		}
+
+	}
+
+}

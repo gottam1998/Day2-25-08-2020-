@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+class Wicket{
+	private long over;
+	private long ball;
+	private String wicketType;
+	private String playerName;
+	private String bowlerName;
+	public long getOver() {
+		return over;
+	}
+	public void setOver(long over) {
+		this.over = over;
+	}
+	public long getBall() {
+		return ball;
+	}
+	public void setBall(long ball) {
+		this.ball = ball;
+	}
+	public String getWicketType() {
+		return wicketType;
+	}
+	public void setWicketType(String wicketType) {
+		this.wicketType = wicketType;
+	}
+	public String getPlayerName() {
+		return playerName;
+	}
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
+	}
+	public String getBowlerName() {
+		return bowlerName;
+	}
+	public void setBowlerName(String bowlerName) {
+		this.bowlerName = bowlerName;
+	}
+}
+public class WicketDetails {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the number of wickets");
+		int n1=s.nextInt();
+		s.nextLine();
+		int n2=1;
+		String[][] in=new String[n1][5];
+		while(n2<=n1) {
+			System.out.println("Enter the details of wickets"+n2);
+			String in2=s.nextLine();
+			in[n2-1]=in2.split(",");
+			n2++;
+			
+		}
+		n2=n1;
+		System.out.println("Wicket Details");
+		for(int i=0;i<n2;i++) {
+			System.out.println("Over : "+in[i][0]);
+			System.out.println("Ball : "+in[i][1]);
+			System.out.println("Wicket Type : "+in[i][2]);
+			System.out.println("Player Name : "+in[i][3]);
+			System.out.println("Bowler Name : "+in[i][4]);
+		}
+
+	}
+
+}

@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+class ExtraType{
+	private String name;
+	private long runs;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public long getRuns() {
+		return runs;
+	}
+	public void setRuns(long runs) {
+		this.runs = runs;
+	}
+}
+
+public class ExtraTypeDetails {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		ExtraType e=new ExtraType();
+		System.out.println("Enter the extratype Details");
+		String extraType=s.nextLine();
+		String[] type=extraType.split("#");
+		e.setName(type[0]);
+		int i=Integer.parseInt(type[1]);
+		e.setRuns(i);
+		System.out.println("ExtraType Details " + 
+				"\nExtra Type:"+e.getName() + 
+				"\nRuns:"+e.getRuns());
+		
+	}
+
+}
